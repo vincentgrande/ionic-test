@@ -1,0 +1,17 @@
+<div class="flex flex-row w-full align-top justify-center">
+
+    <div  class=" w-4/5 border-2 rounded-lg mt-2" style="background-color: #1A6F7D">
+      <a routerLink="/chatroom/{{uid}}" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <div class="flex items-center justify-center lg:justify-self-start sm:h-[10vh] md:h-[10vh] lg:h-[15vh] w-full shadow-md p-2">
+        <div class="profil-img w-[3rem] sm:w-[4rem] md:w-[4rem] lg:w-[5rem] border-2 rounded-full ">
+          <img class="rounded-full" src="{{photoUrl ? '': 'https://seud.org/wp-content/uploads/2020/06/avatar-nobody.png' }}" alt="Profil image"/>
+        </div>
+        <div class="m-2 w-full text-left truncate">
+          <p><strong>{{ displayName }}</strong></p>
+        </div>
+      </div> </a>
+    </div>
+
+</div>
+
+

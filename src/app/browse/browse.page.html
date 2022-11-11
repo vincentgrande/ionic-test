@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>browse</ion-title>
+    <ion-button slot="end" class="ion-margin" (click)="authService.SignOut()">Sign Out</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="browseService.currentUser">
+    <div *ngFor="let item of browseService.items | async">
+      <app-user-item *ngIf="browseService.currentUser.uid != item.uid" [displayName]="item.email" [photoUrl]="item.photoURL" [uid]="item.uid"></app-user-item>
+    </div>
+  </div>
+</ion-content>
